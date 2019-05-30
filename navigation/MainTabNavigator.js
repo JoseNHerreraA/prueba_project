@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import Parqueadero1 from '../screens/Parqueadero';
+import Parqueadero2 from '../screens/Parqueadero2';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -68,7 +69,22 @@ ParqueaderoStack.navigationOptions={
   ),
 };
 
+const Parqueadero2Stack=createStackNavigator({
+  Parqueadero: Parqueadero2,
+})
+
+Parqueadero2Stack.navigationOptions={
+  tabBarLabel:'Parqueadero2',
+  tabBarIcon:({focused})=>(
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS=='ios'?'ios-car':'md-car'}
+    />
+  ),
+};
+
 export default createBottomTabNavigator({
   HomeStack,
   ParqueaderoStack,
+  Parqueadero2Stack,
 });

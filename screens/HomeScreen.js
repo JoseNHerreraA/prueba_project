@@ -38,6 +38,20 @@ export default class HomeScreen extends React.Component {
             </Text>
           </View>
         </ScrollView>
+        <View style={styles.containerBlock}>
+          <View style={styles.containerPark}>
+            <Text style={styles.textContainerPark}>Parqueadero 1</Text>
+          </View>
+          <View style={styles.containerPark}>
+            <Text style={styles.textContainerPark}>Parqueadero 2</Text>
+          </View>
+          <View style={styles.containerPark}>
+            <Text style={styles.textContainerPark}>Parqueadero 3</Text>
+          </View>
+          <View style={styles.containerPark}>
+            <Text style={styles.textContainerPark}>Parqueadero 4</Text>
+          </View>
+        </View>
       </View>
     );
   }
@@ -47,6 +61,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  containerBlock:{
+    flex: 1,
+    flexDirection:'column',
+    backgroundColor: '#fff',
+    justifyContent: 'space-around',
+  },
+  containerPark: {
+    width:490,
+    height:50,
+    backgroundColor: '#32cd32',
+  },
+  textContainerPark:{
+    fontFamily:'normal',
+    fontSize:30,
+    color: '#ffffff',
+    textAlign: 'center',
   },
   contentContainer: {
     paddingTop: 30,

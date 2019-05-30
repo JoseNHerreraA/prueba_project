@@ -64,9 +64,9 @@ export default class Parqueadero1 extends React.Component {
             </View>
             <View style={styles.containerTexto}>
                 <Text style={styles.texto}>Disponibles: </Text>
-                <Text style={styles.texto}>14</Text>
+                <Text style={styles.texto}>13</Text>
                 <Text style={styles.texto}>Ocupados: </Text>
-                <Text style={styles.texto}>26</Text>
+                <Text style={styles.texto}>11</Text>
             </View>
         </View>
       );
