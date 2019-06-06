@@ -5,8 +5,8 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
+  Button,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -18,6 +18,7 @@ export default class HomeScreen extends React.Component {
   };
 
   render() {
+    const {navigate}=this.props.navigation;
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -39,18 +40,28 @@ export default class HomeScreen extends React.Component {
           </View>
         </ScrollView>
         <View style={styles.containerBlock}>
-          <View style={styles.containerPark}>
-            <Text style={styles.textContainerPark}>Parqueadero 1</Text>
-          </View>
-          <View style={styles.containerPark}>
-            <Text style={styles.textContainerPark}>Parqueadero 2</Text>
-          </View>
-          <View style={styles.containerPark}>
-            <Text style={styles.textContainerPark}>Parqueadero 3</Text>
-          </View>
-          <View style={styles.containerPark}>
-            <Text style={styles.textContainerPark}>Parqueadero 4</Text>
-          </View>
+          <Button 
+            onPress={() => navigate('ParqueaderoStack')}
+            title='Parqueadero 1'
+            color='#32cd32'
+            accessibilityLabel='Información sobre Parqueadero # 1'
+          />
+          <Button 
+            onPress={() => navigate('Parqueadero2Stack')}
+            title='Parqueadero 2'
+            color='#32cd32'
+            accessibilityLabel='Información sobre Parqueadero # 2'
+          />
+          <Button 
+            title='Parqueadero 3'
+            color='#32cd32'
+            accessibilityLabel='Información sobre Parqueadero # 3'
+          />
+          <Button
+            title='Parqueadero 4'
+            color='#32cd32'
+            accessibilityLabel='Información sobre Parqueadero # 4'
+          />
         </View>
       </View>
     );
